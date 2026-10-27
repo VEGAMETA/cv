@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игорь Миргородский — резюме</title>
+<meta name="description" content="Junior DevOps: Linux, Docker, Kubernetes, CI/CD, Ansible, Prometheus.">
+<meta property="og:title" content="Игорь Миргородский — резюме">
+<meta property="og:description" content="DevOps-инженер (Junior)">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0F766E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Три режима одной страницы:
+   печать и PDF — ровно один лист A4 (размеры в pt, как в макете);
+   экран компьютера — тот же лист по центру на сером фоне;
+   телефон — обычная страница во всю ширину с крупным шрифтом. */
+:root{--ink:#111;--muted:#5C5C5C;--rule:#D0D0D0;--accent:#0F766E;--paper:#fff;--desk:#ECEDEF}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--desk);color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.bar{max-width:210mm;margin:20px auto 0;display:flex;justify-content:flex-end;gap:16px;font:500 13px/1 'JetBrains Mono',monospace}
+.bar a{color:var(--accent);padding:8px 0}
+
+main{width:210mm;min-height:297mm;margin:12px auto 32px;padding:12mm 15mm;background:var(--paper);
+     box-shadow:0 1px 2px rgba(0,0,0,.06),0 8px 28px rgba(0,0,0,.08);
+     font-family:'Inter',Arial,sans-serif;font-size:9.3pt;line-height:12.6pt}
+h1{margin:0;font-size:24pt;line-height:30pt;font-weight:600;letter-spacing:-0.02em}
+.meta{margin:0;font-family:'JetBrains Mono',monospace;font-size:8.3pt;line-height:11.5pt;color:var(--muted);font-variant-numeric:tabular-nums}
+.contacts{margin-top:7pt}
+.role{margin:0;font-size:12.5pt;line-height:16pt;font-weight:500}
+.lead{margin-top:10pt}
+section{margin-top:12pt}
+h2{margin:0 0 7pt;padding-bottom:4pt;border-bottom:.5pt solid var(--rule);font-family:'JetBrains Mono',monospace;font-size:8.8pt;line-height:12pt;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h2 span{color:var(--accent)}
+article{border-left:.5pt solid var(--rule);padding-left:8pt}
+.list{display:flex;flex-direction:column;gap:7pt}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16pt}
+h3{margin:0;font-size:9.4pt;line-height:12.6pt;font-weight:600}
+.stack{margin:0;font-family:'JetBrains Mono',monospace;font-size:8.2pt;line-height:11.5pt;color:var(--muted)}
+p{margin:0}
+.desc{margin-top:3pt}
+.ar{color:var(--muted)}
+.n{font-family:'JetBrains Mono',monospace;font-size:8.8pt;font-weight:500;color:var(--accent);font-variant-numeric:tabular-nums}
+.k{color:var(--muted)}
+b{font-weight:600}
+.skills{display:flex;flex-direction:column;gap:3pt}
+.edu{display:flex;flex-direction:column;gap:3pt}
+.langs{margin-top:6pt}
+.nowrap{white-space:nowrap}
+
+/* телефон и узкие окна: без листа, во всю ширину, шрифт крупнее */
+@media screen and (max-width:840px){
+  body{background:var(--paper)}
+  .bar{margin:0;padding:12px 16px 0;max-width:none}
+  main{width:auto;min-height:0;margin:0;padding:12px 16px 32px;box-shadow:none;font-size:16px;line-height:1.5;overflow-wrap:anywhere}
+  h1{font-size:30px;line-height:1.15}
+  .role{font-size:18px;line-height:1.35;margin-top:4px}
+  .meta,.stack{font-size:13px;line-height:1.5}
+  .contacts{margin-top:10px}
+  .lead{margin-top:14px}
+  section{margin-top:28px}
+  h2{font-size:13px;line-height:1.4;margin-bottom:14px;padding-bottom:6px;border-bottom-width:1px}
+  .list{gap:22px}
+  article{padding-left:12px;border-left-width:2px}
+  h3{font-size:17px;line-height:1.35}
+  .row{flex-wrap:wrap;gap:4px 12px}
+  .stack{margin-top:4px}
+  .desc{margin-top:8px}
+  .n{font-size:15px}
+  .skills,.edu{gap:10px}
+  .langs{margin-top:14px}
+  .head-row .meta{display:none}  /* «rev.» на телефоне не нужен */
+}
+
+/* печать и «Сохранить как PDF»: ровно лист A4 без фона и тени */
+@media print{
+  body{background:#fff}
+  .bar{display:none}
+  main{margin:0;height:297mm;min-height:0;box-shadow:none;overflow:hidden}
+}
+</style>
+</head>
+<body>
+
+<nav class="bar"><a href="cv.pdf" download>Скачать PDF</a></nav>
+
+<main>
+
+<header>
+<div class="row head-row">
+<h1>Игорь Миргородский</h1>
+<p class="meta nowrap">rev. 2026-10</p>
+</div>
+<p class="role">DevOps-инженер (Junior)</p>
+<p class="meta contacts">Казань · удалёнка · tg <a href="https://t.me/vegameta">@vegameta</a> · <a href="mailto:viperigor12@gmail.com">viperigor12@gmail.com</a></p>
+<p class="lead">Junior DevOps: Linux, Docker, Kubernetes, CI/CD, Ansible, Prometheus; строю инфраструктуру руками и довожу до рабочего состояния.</p>
+</header>
+
+<section>
+<h2><span>01</span> — Проекты</h2>
+<div class="list">
+
+<article>
+<h3>Kubernetes-кластер на k3s (3 ноды, Vagrant)</h3>
+<p class="stack">k3s · ingress-nginx · cert-manager · Let's Encrypt DNS-01 · PostgreSQL PV · Prometheus Operator</p>
+<p class="desc">Поднять кластер под микросервисное приложение с HTTPS <span class="ar">→</span> заменил traefik на ingress-nginx, выпустил wildcard-сертификат через acme-dns, развёртывание одним скриптом <span class="ar">→</span> все <span class="n">9</span> сервисов проходят функциональные тесты Postman по HTTPS.</p>
+</article>
+
+<article>
+<h3>Миграция микросервисов в Kubernetes (minikube)</h3>
+<p class="stack">Kubernetes · ConfigMap/Secret · readiness probes · resource limits</p>
+<p class="desc">Перенести приложение из 9 сервисов в Kubernetes и выбрать стратегию обновления <span class="ar">→</span> написал манифесты с ConfigMap/Secret, readiness probes и resource limits, замерил простой при выкатке <span class="ar">→</span> Recreate — <span class="n">~21 с</span> простоя, RollingUpdate — <span class="n">0 с</span>.</p>
+</article>
+
+<article>
+<h3>Домашняя платформа локального ИИ (pet-проект)</h3>
+<p class="stack">llama.cpp · Docker (WSL) · SearXNG · Python/aiohttp · MCP · Git</p>
+<p class="desc">Запустить LLM 26B с контекстом 256K на GPU 16 ГБ <span class="ar">→</span> свой прокси на aiohttp и MCP-сервер с веб-поиском через SearXNG, конфиги и документация в Git <span class="ar">→</span> устранил сброс кэша промпта: повторная обработка сократилась с <span class="n">12 тыс.</span> до <span class="n">0,6 тыс.</span> токенов.</p>
+</article>
+
+</div>
+</section>
+
+<section>
+<h2><span>02</span> — Навыки</h2>
+<div class="skills">
+<p><span class="k">Контейнеры и оркестрация:</span> <b>Docker</b>, <b>Kubernetes</b>, <b>k3s</b>, Docker Compose, Docker Swarm, minikube, <span class="nowrap">ingress-nginx</span>, <span class="nowrap">cert-manager</span>, Portainer</p>
+<p><span class="k">CI/CD:</span> <b>GitLab CI/CD</b>, GitLab Runner (shell и Docker executors), multi-stage сборки, dockle, деплой по SSH</p>
+<p><span class="k">IaC и конфигурация:</span> <b>Ansible</b>, <b>Vagrant</b>, манифесты Kubernetes, ConfigMap/Secret</p>
+<p><span class="k">Мониторинг:</span> <b>Prometheus</b>, Prometheus Operator</p>
+<p><span class="k">ОС и сети:</span> <b>Linux</b>, <b>Nginx</b> (reverse proxy), WSL, DNS, TLS / Let's Encrypt, overlay-сети</p>
+<p><span class="k">Скрипты:</span> <b>Bash</b>, <b>Python</b> (aiohttp), Git</p>
+<p><span class="k">Базы данных:</span> <b>PostgreSQL</b> (Persistent Volume в Kubernetes)</p>
+</div>
+</section>
+
+<section>
+<h2><span>03</span> — Образование и языки</h2>
+<div class="edu">
+<p><b>КНИТУ</b>, аспирантура — 1.2.2 «Математическое моделирование, численные методы и комплексы программ»: гемодинамика методом решёточных уравнений Больцмана (C++, OpenLB)</p>
+<p><b>КГМУ</b>, специалитет</p>
+<p><b>Сбер (Школа 21)</b>, трек DevOps — обучение через самостоятельные проекты и peer-review</p>
+</div>
+<p class="langs">Русский — родной · Английский — C1 (EF SET), свободно читаю техническую документацию</p>
+</section>
+
+</main>
+</body>
+</html>
